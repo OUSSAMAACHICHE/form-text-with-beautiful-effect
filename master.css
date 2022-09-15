@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #181818;
+    height: 100vh;
+}
+.card {
+    width: 500px;
+    position: relative;
+    height: 500px;
+    background: #1c1c1c;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 500px;
+    height: 500px;
+    background-image: linear-gradient(0deg, transparent,
+     #45f3ff, #45f3ff);
+     animation: animation 6s linear infinite;
+     transform-origin: bottom right;
+}
+.card::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 500px;
+    height: 500px;
+    background-image: linear-gradient(0deg, transparent,
+     #45f3ff, #45f3ff);
+     animation: animation 6s linear infinite;
+     transform-origin: bottom right;
+     animation-delay: 3s;
+}
+.form {
+    position: absolute;
+    background-color: #28292d;
+    z-index: 10;
+    inset: 2px;
+    border-radius: 30px;
+    width: 90%;
+    margin: auto;
+}
+.form .head {
+    color: #45fdf4;
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.form label {
+   color: #45f3ff;
+   display: block;
+   letter-spacing: 1px;
+   font-size: 1.3rem;
+   text-transform: capitalize;
+   margin: auto;
+   width: fit-content;
+}
+.form input {
+    display: block;
+    padding: 15px 0px;
+    margin: 20px auto;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: white;
+    width: 70%;
+    border-bottom: 1px solid #45f3ff;
+    caret-color: #45f3ff;
+}
+.form input::placeholder {
+    text-transform: capitalize;
+}
+.form .forgot {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto;
+    width: 70%;
+}
+.form .forgot .one {
+    color: #777;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.form .forgot .two {
+    color: #45f3ff;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.form .btn {
+    display: block;
+    padding: 10px 30px;
+    text-transform: capitalize;
+    background: #45f3ff;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    margin: 40px auto 10px;
+}
+/* start animation  */
+@keyframes animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* end animation  */
